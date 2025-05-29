@@ -1,3 +1,6 @@
+
+package util;
+
 public class Turbina
 {
     private double betz_c = 0.592592593d;

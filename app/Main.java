@@ -1,7 +1,13 @@
+package app;
+
 import java.util.Scanner;
 import java.io.*;
+import java.time.LocalDateTime;
 
-public class Main
+import util.*;
+import dados.Dados;
+import html.CriadorHTML;
+public class Main implements Serializable
 {
     public static void main(String[] args)
     {
@@ -36,5 +42,9 @@ public class Main
         {
             System.out.println("Erro");
         }
+        
+        Dados dados = new Dados("Goias", toneladas_lixo, metano_produzido, energia_lixo, area);
+        Dados.SalvarDados(dados);
+        CriadorHTML.CriarHTML(dados);
     }
 }

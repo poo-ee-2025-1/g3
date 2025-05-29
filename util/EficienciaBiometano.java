@@ -1,3 +1,5 @@
+package util;
+
 public class EficienciaBiometano
 {
     public double eficiencia = 0.9d;
@@ -6,7 +8,7 @@ public class EficienciaBiometano
     public double entalpia_metano = -802.27d;
     //energia liberada na queima de 1 mol de metano
     
-    public double massa_molar_metano = 0.01604245; //16.04245; esse valor esta em grama/mol
+    public double massa_molar_metano = 0.01604245d; //16.04245; esse valor esta em grama/mol
     //massa de metano em kilograma/mol
     
     public double densidade_metano = 0.668d;
