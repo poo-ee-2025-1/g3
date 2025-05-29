@@ -1,1 +1,0 @@
-A pasta src contém os arquivos não compilados do projeto. Se quiserem modificar eles vão em frente.
