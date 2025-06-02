@@ -19,7 +19,7 @@ Engenheiro -> Sistema : alterarRelatorio(novosDados) Sistema -> Registro : atual
 </p>
 
 
-/////////////////////////////////////////////////////////////////////////////#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+<p>///////////////////////////////////////////////////////////////////////////#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\</p>
 
 
 # Lixo=energia
@@ -32,4 +32,4 @@ Engenheiro -> Sistema : alterarRelatorio(novosDados) Sistema -> Registro : atual
 
 ### Italo Píres, Pablo Henrique, João Pedro Moynier & Arthur Jardim
 
-## Preencha os dados para formulação do relátorio
+# Preencha os dados para formulação do relátorio
