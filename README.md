@@ -21,7 +21,7 @@ Engenheiro -> Sistema : alterarRelatorio(novosDados) Sistema -> Registro : atual
 
 <p>///////////////////////////////////////////////////////////////////////////#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\</p>
 
-<p>
+
 # Lixo=energia
 
 ## O objetivo do projeto é criar uma plataforma, site/aplicativo, de monitoramento de um ambiente controlado para geração de energia apartir de lixo
@@ -36,4 +36,3 @@ Engenheiro -> Sistema : alterarRelatorio(novosDados) Sistema -> Registro : atual
 
 
 # Preencha os dados para formulação do relátorio
-</p>
