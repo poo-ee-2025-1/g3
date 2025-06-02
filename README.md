@@ -35,14 +35,14 @@ COMO INICIAR O PROJETO:
 AUTORES:
 INSTRUÇÕES PARA O USUÁRIO:
 
-### Lixo=energia
+# Lixo=energia
 
-# O objetivo do projeto é criar uma plataforma, site/aplicativo, de monitoramento de um ambiente controlado para geração de energia apartir de lixo
+## O objetivo do projeto é criar uma plataforma, site/aplicativo, de monitoramento de um ambiente controlado para geração de energia apartir de lixo
 
-# Versão 0.1.8 - 02/06/2025
+### Versão 0.1.8 - 02/06/2025
 
 # 
 
-# Italo Píres, Pablo Henrique, João Pedro Moynier & Arthur Jarim
+### Italo Píres, Pablo Henrique, João Pedro Moynier & Arthur Jarim
 
 ## Preencha os dados para formulação do relátorio
