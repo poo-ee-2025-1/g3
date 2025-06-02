@@ -30,6 +30,6 @@ Engenheiro -> Sistema : alterarRelatorio(novosDados) Sistema -> Registro : atual
 
 # 
 
-### Italo Píres, Pablo Henrique, João Pedro Moynier & Arthur Jarim
+### Italo Píres, Pablo Henrique, João Pedro Moynier & Arthur Jardim
 
 ## Preencha os dados para formulação do relátorio
