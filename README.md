@@ -24,12 +24,17 @@ Engenheiro -> Sistema : alterarRelatorio(novosDados) Sistema -> Registro : atual
 
 # Lixo=energia
 
+
 ## O objetivo do projeto é criar uma plataforma, site/aplicativo, de monitoramento de um ambiente controlado para geração de energia apartir de lixo
+
 
 ### Versão 0.1.8 - 02/06/2025
 
 # 
 
 ### Italo Píres, Pablo Henrique, João Pedro Moynier & Arthur Jardim
+
+
+
 
 # Preencha os dados para formulação do relátorio
