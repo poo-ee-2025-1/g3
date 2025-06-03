@@ -24,8 +24,7 @@ Engenheiro -> Sistema : alterarRelatorio(novosDados) Sistema -> Registro : atual
 <br>
 <br>
 
-#<p>                                                                        Lixo=energia 
-</p>
+#Lixo=energia 
 
 <br>
 <br>
