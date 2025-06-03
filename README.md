@@ -35,7 +35,7 @@ Engenheiro -> Sistema : alterarRelatorio(novosDados) Sistema -> Registro : atual
 
 ### Italo Píres, Pablo Henrique, João Pedro Moynier & Arthur Jardim
 
-#
+# Executar app/main.class, no terminal
 
 <br>
 <br>
