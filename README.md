@@ -27,8 +27,9 @@ Engenheiro -> Sistema : alterarRelatorio(novosDados) Sistema -> Registro : atual
 <br>
 <br>
 
-## O objetivo do projeto é criar uma plataforma, site/aplicativo, de monitoramento de um ambiente controlado para geração de energia apartir de lixo
+# O objetivo do projeto é criar uma plataforma, site/aplicativo, de monitoramento de um ambiente controlado para geração de energia apartir de lixo
 
+<br>
 <br>
 
 ### Versão 0.1.8 - 02/06/2025
