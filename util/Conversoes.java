@@ -1,10 +1,10 @@
 package util;
 
 public class Conversoes
-
 {
     EficienciaBiometano ebio = new EficienciaBiometano();
     public double Volume = 30.1045d;
+    //Volume de biometano produzido por tonelada de lixo em Nm3
     
     public double massa_met(double toneladas)
     {
@@ -24,7 +24,7 @@ public class Conversoes
         return energia;
     }
     
-    //TESTE DE CALCULOS
+    //TESTE DE CALCULOS, rode isso para testar os valores das conversoes
     public static void main(String[] args)
     {
         EficienciaBiometano ebio = new EficienciaBiometano();
