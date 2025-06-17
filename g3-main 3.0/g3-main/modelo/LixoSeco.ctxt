@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=LixoSeco
+comment1.params=mMadeira\ mTecidos\ mPapeis\ eficiencia
+comment1.target=LixoSeco(double,\ double,\ double,\ double)
+comment2.params=
+comment2.target=void\ calcularEnergias()
+comment3.params=
+comment3.target=double\ getJAparente()
+comment4.params=
+comment4.target=double\ getJUtil()
+comment5.params=
+comment5.target=double\ getJPerda()
+numComments=6
