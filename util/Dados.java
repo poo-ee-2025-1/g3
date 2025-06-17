@@ -29,40 +29,17 @@ public class Dados implements Serializable
         {
             LocalDateTime data = LocalDateTime.now();
             
-            String dir = System.getProperty("user.dir") + File.separator + "dados";
-            //Cria uma string mostrando o caminho da pasta a ser criada
-            File pasta = new File(dir);
-            //Cria um arquvio com o caminho da pasta
-            
-            boolean dirCreated = pasta.mkdir();
-            //mkdir cria a pasta
-            if (dirCreated)
-            {
-                System.out.println("Pasta \"dados\" criada com sucesso em: " + System.getProperty("user.dir") + File.separator + "dados");
-            }
-            else
-            {
-                System.out.println("Erro ao criar a pasta \"dados\". Talvez ela ja tenha sido criada.");
-            }
-            
-            FileOutputStream fis = new FileOutputStream(dir + File.separator + data + ".DAT");
-            //Cria uma saida de arquivo .dat no caminho do diretorio dir
+            FileOutputStream fis = new FileOutputStream(data + ".DAT");
             ObjectOutputStream ois = new ObjectOutputStream(fis);
-            //Cria uma saida de objeto para a saida de arquivo
             ois.writeObject(dado);
-            //Escreve os dados de objeto no arquivo.
             
             ois.close();
             fis.close();
-            //Fecho as duas saidas
-            
-            System.out.println("Dados salvo em: " + dir + File.separator + data + ".DAT");
         }
         
         catch(Exception E)
         {
-            String dir = System.getProperty("user.dir") + File.separator + "dados";
-            System.out.println("Erro ao salvar em: " + dir + File.separator);
+            
         }
     }
     
@@ -74,24 +51,17 @@ public class Dados implements Serializable
         try
         {
             FileInputStream fis = new FileInputStream(arquivo);
-            //Cria uma entrada de arquivos
             ObjectInputStream ois = new ObjectInputStream(fis);
-            //Cria uma entrada de objetos para a entrada de arquivos
             Dados dado_in = (Dados)ois.readObject();
-            //Le um objeto e converte para a classe "Dados"
             
             ois.close();
             fis.close();
-            //Fecho as entradas
-            return dado_in;
-            //Retorno os dados
+            return (Dados)ois.readObject();
         }
         
         catch(Exception E)
         {
-            String dir = System.getProperty("user.dir") + File.separator + "dados";
-            System.out.println("Erro ao ler arquivos em: " + dir + File.separator);
-            return null;
+            return null;   
         }
     }
 }
