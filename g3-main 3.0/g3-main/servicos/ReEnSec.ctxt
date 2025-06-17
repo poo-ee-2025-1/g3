@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=ReEnSec
-comment1.params=ls\ ces
-comment1.target=ReEnSec(modelo.LixoSeco,\ ConEnSec)
-comment2.params=
-comment2.target=void\ relatorio()
-numComments=3

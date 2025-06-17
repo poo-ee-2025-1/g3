@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=Main
-comment1.params=args
-comment1.target=void\ main(java.lang.String[])
-comment2.params=sc\ mensagem
-comment2.target=double\ obterEntradaValida(java.util.Scanner,\ java.lang.String)
-numComments=3
