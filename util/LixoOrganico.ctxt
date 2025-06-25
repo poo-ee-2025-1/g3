@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=LixoOrganico
+comment1.params=local\ lixo_gerado\ area_de_vazao\ volume_de_agua
+comment1.target=void\ Processo(java.lang.String,\ double,\ double,\ double)
+numComments=2

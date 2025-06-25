@@ -3,44 +3,28 @@ package util;
 public class Conversoes
 
 {
-    EficienciaBiometano ebio = new EficienciaBiometano();
-    public double Volume = 30.1045d;
+    //EficienciaBiometano ebio = new EficienciaBiometano();
     
-    public double massa_met(double toneladas)
+	public static double kg_para_ton(double kg)
     {
-        double massa = (double) (((ebio.kg_para_ton(ebio.densidade_metano)) / Volume) * ebio.eficiencia * toneladas);
+        return kg * 0.001102311;
+        //Retorna o valor em toneladas
+    }
+    public static double massa_met(double toneladas)
+    {
+        double massa = kg_para_ton((EficienciaBiometano.VOLUME / EficienciaBiometano.MET_DENSIDADE) * EficienciaBiometano.EFICIENCIA * toneladas);
         return massa;
     }
     
-    public double mol_met(double toneladas)
+    public static double mol_met(double toneladas)
     {
-        double mol = (double) (massa_met(toneladas) / ebio.kg_para_ton(ebio.massa_molar_metano));
+        double mol = (double) (massa_met(toneladas) / kg_para_ton(EficienciaBiometano.MET_MASS_MOLAR));
         return mol;
     }
     
-    public double energia_met(double toneladas)
+    public static double energia_met(double toneladas)
     {
-        double energia = (double) (mol_met(toneladas) * ebio.entalpia_metano);
+        double energia = (double) (mol_met(toneladas) * EficienciaBiometano.MET_ENTALPIA);
         return energia;
-    }
-    
-    //TESTE DE CALCULOS
-    public static void main(String[] args)
-    {
-        EficienciaBiometano ebio = new EficienciaBiometano();
-        
-        //System.out.println(ebio.kg_para_ton(ebio.massa_met()));
-        
-        //tonelada a partir do volume
-        //V=densidade/massa
-        double Volume = 30.1045d;
-        double massa_met = (double) (((ebio.kg_para_ton(ebio.densidade_metano)) / Volume) * ebio.eficiencia);
-        double mol_met = (double) (massa_met / ebio.kg_para_ton(ebio.massa_molar_metano));
-        double energia_met = (double) (mol_met * ebio.entalpia_metano);
-        
-        System.out.println(Volume + " Nm^3");
-        System.out.println(massa_met + " Ton");
-        System.out.println(mol_met + " mol");
-        System.out.println(energia_met + " kJ/mol");
     }
 }

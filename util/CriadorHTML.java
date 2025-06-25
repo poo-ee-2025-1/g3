@@ -2,7 +2,8 @@ package util;
 
 import java.io.*;
 import java.time.LocalDateTime;
-import util.Dados;
+
+import banco_de_dados.Dados;
 
 public class CriadorHTML
 {
@@ -28,14 +29,16 @@ public class CriadorHTML
                         O local foi: %s <br>
                         A Geraçao de lixo foi: %s <br>
                         O metano produzido foi: %s <br>
-                        Energia do metano do lixo: %s <br>
-                        Area da turbina do gerador: %s <br>
+                        A Energia do metano produzido foi: %s <br>s
+                        Area de vazao do calor: %s <br>
+                        A Energia do gerador foi: %s <br>
+                        Gerado no dia: %s
                     </p>
                 </body>
             </html>
         """;
         
-        HTML = String.format(HTML,dado.local, dado.toneladas_lixo, dado.metano_produzido, dado.energia_lixo, dado.area_turbina);
+        HTML = String.format(HTML,dado.get_local(), dado.get_lixo(), dado.get_metano(), dado.get_energia_metano(), dado.get_area(), dado.get_energia_gerada(), dado.get_dia());
         //Criaçao de arquivo
         try
         {

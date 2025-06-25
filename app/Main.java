@@ -1,6 +1,5 @@
 package app;
 
-import modelo.LixoSeco;
 import servicos.ConEnSec;
 import servicos.ReEnSec;
 import util.*;
@@ -26,8 +25,8 @@ public class Main implements Serializable {
         double area_turbina = sc.nextDouble();
 
         Turbina turbina = new Turbina();
-        turbina.set_area_turbina(area_turbina);
-        turbina.energia_paraVelocidade(energia_lixo_molhado);
+        //turbina.set_area_turbina(area_turbina);
+        //turbina.energia_paraVelocidade(energia_lixo_molhado);
 
         // Entrada - Lixo Seco
         System.out.println("\n===== Entrada de Dados: Lixo Seco =====");
@@ -48,15 +47,15 @@ public class Main implements Serializable {
         System.out.printf("Lixo: %.2f Toneladas\n", toneladas_lixo);
         System.out.printf("Metano produzido: %.4f Toneladas\n", metano_produzido);
         System.out.printf("Energia do Metano: %.4f MW\n", energia_lixo_molhado / Math.pow(10, 6));
-        System.out.printf("Energia do Gerador: %.4f MW\n", turbina.potencia_maxima(energia_lixo_molhado) / Math.pow(10, 6));
+        //System.out.printf("Energia do Gerador: %.4f MW\n", turbina.potencia_maxima(energia_lixo_molhado) / Math.pow(10, 6));
 
         System.out.println("\n===== Relatório Lixo Seco =====");
         res.relatorio();
 
         // Armazenar dados
-        Dados dados = new Dados("Goias", toneladas_lixo, metano_produzido, energia_lixo_molhado, area_turbina);
-        Dados.SalvarDados(dados);
-        CriadorHTML.CriarHTML(dados);
+        //Dados dados = new Dados("Goias", toneladas_lixo, metano_produzido, energia_lixo_molhado, area_turbina);
+        //Dados.SalvarDados(dados);
+        //CriadorHTML.CriarHTML(dados);
 
         sc.close();
     }
