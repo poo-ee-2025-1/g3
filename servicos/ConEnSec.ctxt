@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ConEnSec
+comment1.params=lixo
+comment1.target=double\ aparenteParaWh(modelo.LixoSeco)
+comment2.params=lixo
+comment2.target=double\ aparenteParaKWh(modelo.LixoSeco)
+comment3.params=lixo
+comment3.target=double\ utilParaWh(modelo.LixoSeco)
+comment4.params=lixo
+comment4.target=double\ utilParaKWh(modelo.LixoSeco)
+comment5.params=lixo
+comment5.target=double\ perdaParaWh(modelo.LixoSeco)
+comment6.params=lixo
+comment6.target=double\ perdaParaKWh(modelo.LixoSeco)
+numComments=7
