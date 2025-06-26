@@ -1,47 +1,71 @@
-# Diagrama de Sequencia
-<p>
-  http://www.plantuml.com/plantuml/png/hPD1ReCm44NtdC9B8fKBT16b4hr0UeA9xTAHZ0UDnrMlKtNHWt2n6YeCH7MKHRVscyUV3vo204liNGLQYDMpxwn_iyXK3Ua2DGxWHRrW4Dl3xkniktHw1JuD3ZLeeAfQLQevBWRrg1nrwEiOulZ9I0yg90eErG8q2Lv74w_9loBtC7wFNwIC_HMK_O5I11JW5WJgZVYO8oVg4eC6Fbi7GemKQWEIKcIYsMV6830zc_D0ER3zm0lo5YrdjSvg9Bz9KX_kDvV5cd7hD60ebAheBF_1Ba22yrlDT3inAUbwqLmv8x1PkDbOx3PlCwiDbTTVIJ0ursPkL01EzejvUgVGtce298B3K1Ywfv8L_vzovjly2vZYPxUWUOK9FLblOkz-0000
-  Diagrama feito por Italo Pires
+Relatório de Desenvolvimento – Projeto de Geração de Energia a partir do Lixo
+Aluno: Pablo Henrique Rodrigues Gomes
+Disciplina: Programação Orientada a Objetos
+IDE utilizada: BlueJ
+Linguagem: Java
+Data de alteração: 26/06/2025
 
-  ## Sintaxe desse Diagrama
-  
-  @startuml actor Engenheiro participant Sistema participant Registro participant Aplicacao
+Objetivo do Projeto
+O projeto tem como objetivo simular a geração de energia a partir da decomposição e queima de diferentes tipos de lixo, dividindo o sistema em duas frentes principais:
 
-Engenheiro -> Sistema : login(usuário, senha) Sistema --> Engenheiro : confirmação de login
+Lixo molhado (biomassa orgânica, como restos de comida e resíduos biodegradáveis)
 
-Engenheiro -> Sistema : solicitarData() Sistema -> Registro : buscarRelatorios(data) Registro --> Sistema : lista de relatorios Sistema --> Engenheiro : exibir relatorios
+Lixo seco (materiais como madeira, tecidos e papéis)
 
-Engenheiro -> Sistema : selecionarRelatorio() Sistema --> Engenheiro : exibir relatorio
+A proposta é modelar o comportamento físico-químico de ambos os tipos de resíduos e calcular a energia que pode ser gerada a partir deles.
 
-Engenheiro -> Sistema : criarRelatorio(dados) Sistema -> Registro : gerarRelatorio(dados) Registro -> Aplicacao : gerarDados() Aplicacao --> Registro : guardarDados(dados) Registro --> Sistema : relatorio gerado Sistema --> Engenheiro : relatorio adicionado
+Divisão de Tarefas
+O projeto foi desenvolvido em equipe, sendo minha responsabilidade a implementação do módulo de lixo seco. A parte de lixo molhado ficou a cargo dos colegas, sendo posteriormente integrada em um sistema unificado.
 
-Engenheiro -> Sistema : alterarRelatorio(novosDados) Sistema -> Registro : atualisarRelatorio(novosDados) Registro -> Aplicacao : gerarDados(novosDados) Aplicacao --> Registro : guardarDados(dados) Registro --> Sistema : dados confirmados Sistema --> Engenheiro : dados atualisados @enduml
-</p>
+Parte do Lixo Seco
+Implementei a parte de simulação energética do lixo seco com as seguintes características:
 
+Entrada das massas (em kg) de madeira, tecidos e papéis
 
-<br>
-<br>
-<br>
-<br>
+Cálculo da energia aparente, útil (após eficiência da queima) e perdida
 
-# Geração de energia a partir do Lixo
+Conversões de energia para Wh e kWh
 
-<br>
-<br>
+Exibição formatada dos dados em forma de tabela (relatório no terminal)
 
-# O objetivo do projeto é criar uma plataforma, site/aplicativo, de monitoramento de um ambiente controlado para geração de energia apartir de lixo
+Principais classes desenvolvidas:
 
-<br>
-<br>
+LixoSeco (modelo)
 
-### Versão 0.1.8 - 02/06/2025
+ConEnSec (conversor de energia)
 
-### Italo Píres, Pablo Henrique, João Pedro Moynier & Arthur Jardim
+ReEnSec (relatório formatado)
 
-### Executar app/main.class, no terminal
+Integração dos Módulos
+A etapa final do projeto consistiu na integração dos dois módulos em um único sistema executável. Essa integração foi feita na classe Main, localizada no pacote app. Os principais pontos da integração foram:
 
-<br>
-<br>
-<br>
+Reorganização dos pacotes para manter a modularidade:
 
-# Preencha os dados para formulação do relátorio
+util → classes gerais e compartilhadas
+
+modelo → estrutura de dados do lixo seco
+
+servicos → lógica de cálculo e conversão de energia do lixo seco
+
+app → ponto de entrada da aplicação
+
+Unificação da entrada de dados com Scanner
+
+Exibição conjunta dos relatórios de lixo seco e molhado
+
+Manutenção da geração automática de arquivos .html e .DAT com os dados do lixo molhado
+
+Resultados
+O programa foi capaz de:
+
+Simular de forma precisa a produção de energia a partir de lixo seco e molhado
+
+Exibir de forma clara os dados no terminal
+
+Salvar automaticamente os resultados da simulação
+
+Reforçar o uso de princípios de POO, como encapsulamento, separação de responsabilidades e modularidade
+
+Conclusão
+O projeto contribuiu significativamente para o aprofundamento do entendimento de Programação Orientada a Objetos, especialmente em relação à organização de pacotes, reaproveitamento de código, serialização de objetos e manipulação de entrada/saída em Java. Além disso, integrou conceitos interdisciplinares envolvendo física, química e sustentabilidade.
+
