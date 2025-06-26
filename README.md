@@ -69,3 +69,80 @@ Reforçar o uso de princípios de POO, como encapsulamento, separação de respo
 Conclusão
 O projeto contribuiu significativamente para o aprofundamento do entendimento de Programação Orientada a Objetos, especialmente em relação à organização de pacotes, reaproveitamento de código, serialização de objetos e manipulação de entrada/saída em Java. Além disso, integrou conceitos interdisciplinares envolvendo física, química e sustentabilidade.
 
+```mermaid
+classDiagram
+
+class Main {
+  +main(String[]): void
+}
+
+class LixoSeco {
+  - mMadeira: double
+  - mTecidos: double
+  - mPapeis: double
+  - eficiencia: double
+  - jAparente: double
+  - jUtil: double
+  - jPerda: double
+  + calcularEnergias(): void
+  + getJAparente(): double
+  + getJUtil(): double
+  + getJPerda(): double
+}
+
+class ConEnSec {
+  + aparenteParaWh(ls): double
+  + utilParaWh(ls): double
+  + perdaParaWh(ls): double
+}
+
+class ReEnSec {
+  - ls: LixoSeco
+  - ces: ConEnSec
+  + relatorio(): void
+}
+
+class Conversoes {
+  + energia_met(double): double
+  + massa_met(double): double
+  + mol_met(double): double
+}
+
+class Turbina {
+  - area_turbina: double
+  + set_area_turbina(double): void
+  + energia_paraVelocidade(double): void
+  + potencia_maxima(double): double
+}
+
+class EficienciaBiometano {
+  + eficiencia: double
+  + entalpia_metano: double
+}
+
+class Dados {
+  + local: String
+  + toneladas_lixo: double
+  + metano_produzido: double
+  + energia_lixo: double
+  + area_turbina: double
+  + SalvarDados(Dados): void
+}
+
+class CriadorHTML {
+  + CriarHTML(Dados): void
+}
+
+Main --> LixoSeco
+Main --> ConEnSec
+Main --> ReEnSec
+Main --> Conversoes
+Main --> Turbina
+Main --> Dados
+Main --> CriadorHTML
+
+ReEnSec --> LixoSeco
+ReEnSec --> ConEnSec
+ConEnSec --> LixoSeco
+Conversoes --> EficienciaBiometano
+Turbina --> Conversoes
