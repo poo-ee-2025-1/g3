@@ -4,9 +4,9 @@
 
 O projeto visa simular o reaproveitamento energético de materiais descartados pela sociedade, focando em duas categorias de lixo:
 
-Lixo Molhado → convertido em metano para geração de energia via turbinas.
+🔄 Lixo Molhado: convertido em metano para geração de energia via turbinas.
 
-Lixo Seco → convertido diretamente por meio da queima de materiais (madeira, tecidos, papéis).
+🔥 Lixo Seco: convertido diretamente por meio da queima de materiais (madeira, tecidos, papéis).
 
 A proposta simula cenários reais de reaproveitamento e avalia as perdas e eficiências térmicas no processo.
 
@@ -14,7 +14,7 @@ A proposta simula cenários reais de reaproveitamento e avalia as perdas e efici
 
 O projeto foi dividido em módulos principais, utilizando os princípios da programação orientada a objetos (POO):
 
-♻️ Módulo Lixo Molhado:
+♻️ Módulo Lixo Molhado
 
 Calcula a quantidade de metano gerado a partir da massa de lixo.
 
@@ -24,7 +24,7 @@ Simula o uso dessa energia em turbinas, estimando a potência gerada.
 
 Salva relatórios automáticos em HTML e arquivos serializados.
 
-🔥 Módulo Lixo Seco:
+🔥 Módulo Lixo Seco
 
 Recebe massas de madeira, tecidos e papéis.
 
@@ -32,7 +32,7 @@ Calcula a energia aparente, útil e perdida com base em eficiência fornecida pe
 
 Exibe relatórios no terminal com dados convertidos para Joules, Wh e kWh.
 
-🔗 Integração Geral:
+🔗 Integração Geral
 
 Os módulos foram integrados em um projeto coeso.
 
@@ -40,9 +40,9 @@ Foi criado um ponto de entrada com interface terminal para que o usuário simule
 
 📊 3. Tabela de Participantes
 
-Nome do Participante
+👤 Participante
 
-Responsabilidades
+🛠️ Responsabilidades
 
 Pablo Henrique
 
@@ -58,13 +58,13 @@ Interface e apresentação visual
 
 🧰 4. Tecnologias e Ferramentas Utilizadas
 
-Ferramenta / Plataforma
+🧪 Plataforma/Ferramenta
 
-Função Utilizada no Projeto
+💼 Uso no Projeto
 
 Java
 
-Linguagem principal do projeto
+Linguagem principal
 
 BlueJ
 
@@ -72,15 +72,15 @@ Ambiente de desenvolvimento
 
 GitHub
 
-Versionamento de código e integração de equipe
+Versionamento de código
 
 SQL (conceitual)
 
-Modelagem para futura expansão com banco
+Planejamento de banco de dados futuro
 
 Mermaid.js
 
-Diagrama de classes
+Diagramas de classes
 
 HTML
 
@@ -88,35 +88,35 @@ Geração automática de relatórios visuais
 
 🧠 5. Conceitos Acadêmicos Envolvidos
 
-Conversão de unidades de energia (J, Wh, kWh)
+📐 Conversão de unidades de energia (J, Wh, kWh)
 
-Eficiência térmica e perdas por calor
+🔥 Eficiência térmica e perdas por calor
 
-Massa molar, densidade, entalpia
+⚖️ Massa molar, densidade, entalpia
 
-Serialização de objetos e arquivos
+💾 Serialização de objetos e arquivos
 
-Geração dinâmica de arquivos HTML
+🌐 Geração dinâmica de arquivos HTML
 
-Diagramas UML (com Mermaid.js)
+🧩 Diagramas UML (com Mermaid.js)
 
 🖥️ 6. Execução do Projeto
 
-Compile o projeto completo em sua IDE Java (recomendado: BlueJ).
+✅ Compile o projeto completo em sua IDE Java (recomendado: BlueJ).
 
-Execute a classe Main no pacote app.
+▶️ Execute a classe Main no pacote app.
 
-Forneça os valores solicitados:
+🧮 Forneça os valores solicitados:
 
 Massa de lixo molhado (toneladas)
 
 Massa de materiais secos (kg)
 
-Eficiência da queima
+Eficiência da queima (valor entre 0 e 1)
 
 Área da turbina (m²)
 
-Os resultados serão exibidos no terminal e salvos automaticamente.
+📊 Os resultados serão exibidos no terminal e salvos automaticamente.
 
 🧾 7. Códigos-Fonte e Diagrama de Classes
 
@@ -205,5 +205,4 @@ Este projeto buscou aliar conceitos de física, sustentabilidade e programação
 
 O uso de arquivos e interfaces simples permite que o código seja expandido futuramente para interface gráfica, banco de dados real e aplicações web.
 
-Obrigado pela atenção! 😊
-
+📝 Obrigado pela atenção! 😊
