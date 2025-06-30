@@ -1,47 +1,209 @@
-# Diagrama de Sequencia
-<p>
-  http://www.plantuml.com/plantuml/png/hPD1ReCm44NtdC9B8fKBT16b4hr0UeA9xTAHZ0UDnrMlKtNHWt2n6YeCH7MKHRVscyUV3vo204liNGLQYDMpxwn_iyXK3Ua2DGxWHRrW4Dl3xkniktHw1JuD3ZLeeAfQLQevBWRrg1nrwEiOulZ9I0yg90eErG8q2Lv74w_9loBtC7wFNwIC_HMK_O5I11JW5WJgZVYO8oVg4eC6Fbi7GemKQWEIKcIYsMV6830zc_D0ER3zm0lo5YrdjSvg9Bz9KX_kDvV5cd7hD60ebAheBF_1Ba22yrlDT3inAUbwqLmv8x1PkDbOx3PlCwiDbTTVIJ0ursPkL01EzejvUgVGtce298B3K1Ywfv8L_vzovjly2vZYPxUWUOK9FLblOkz-0000
-  Diagrama feito por Italo Pires
+🗂️ Relatório Final do Projeto: Geração de Energia a partir de Lixo Seco e Molhado
 
-  ## Sintaxe desse Diagrama
-  
-  @startuml actor Engenheiro participant Sistema participant Registro participant Aplicacao
+🎯 1. Objetivo Geral
 
-Engenheiro -> Sistema : login(usuário, senha) Sistema --> Engenheiro : confirmação de login
+O projeto visa simular o reaproveitamento energético de materiais descartados pela sociedade, focando em duas categorias de lixo:
 
-Engenheiro -> Sistema : solicitarData() Sistema -> Registro : buscarRelatorios(data) Registro --> Sistema : lista de relatorios Sistema --> Engenheiro : exibir relatorios
+Lixo Molhado → convertido em metano para geração de energia via turbinas.
 
-Engenheiro -> Sistema : selecionarRelatorio() Sistema --> Engenheiro : exibir relatorio
+Lixo Seco → convertido diretamente por meio da queima de materiais (madeira, tecidos, papéis).
 
-Engenheiro -> Sistema : criarRelatorio(dados) Sistema -> Registro : gerarRelatorio(dados) Registro -> Aplicacao : gerarDados() Aplicacao --> Registro : guardarDados(dados) Registro --> Sistema : relatorio gerado Sistema --> Engenheiro : relatorio adicionado
+A proposta simula cenários reais de reaproveitamento e avalia as perdas e eficiências térmicas no processo.
 
-Engenheiro -> Sistema : alterarRelatorio(novosDados) Sistema -> Registro : atualisarRelatorio(novosDados) Registro -> Aplicacao : gerarDados(novosDados) Aplicacao --> Registro : guardarDados(dados) Registro --> Sistema : dados confirmados Sistema --> Engenheiro : dados atualisados @enduml
-</p>
+🧱 2. Estrutura do Projeto
 
+O projeto foi dividido em módulos principais, utilizando os princípios da programação orientada a objetos (POO):
 
-<br>
-<br>
-<br>
-<br>
+♻️ Módulo Lixo Molhado:
 
-# Geração de energia a partir do Lixo
+Calcula a quantidade de metano gerado a partir da massa de lixo.
 
-<br>
-<br>
+Converte a massa em energia utilizando dados reais de entalpia.
 
-# O objetivo do projeto é criar uma plataforma, site/aplicativo, de monitoramento de um ambiente controlado para geração de energia apartir de lixo
+Simula o uso dessa energia em turbinas, estimando a potência gerada.
 
-<br>
-<br>
+Salva relatórios automáticos em HTML e arquivos serializados.
 
-### Versão 0.1.8 - 02/06/2025
+🔥 Módulo Lixo Seco:
 
-### Italo Píres, Pablo Henrique, João Pedro Moynier & Arthur Jardim
+Recebe massas de madeira, tecidos e papéis.
 
-### Executar app/main.class, no terminal
+Calcula a energia aparente, útil e perdida com base em eficiência fornecida pelo usuário.
 
-<br>
-<br>
-<br>
+Exibe relatórios no terminal com dados convertidos para Joules, Wh e kWh.
 
-# Preencha os dados para formulação do relátorio
+🔗 Integração Geral:
+
+Os módulos foram integrados em um projeto coeso.
+
+Foi criado um ponto de entrada com interface terminal para que o usuário simule ambos os sistemas.
+
+📊 3. Tabela de Participantes
+
+Nome do Participante
+
+Responsabilidades
+
+Pablo Henrique
+
+Lixo Seco; Integração de códigos
+
+João Moiniere
+
+Lixo Molhado; Banco de dados
+
+Ítalo & Arthur
+
+Interface e apresentação visual
+
+🧰 4. Tecnologias e Ferramentas Utilizadas
+
+Ferramenta / Plataforma
+
+Função Utilizada no Projeto
+
+Java
+
+Linguagem principal do projeto
+
+BlueJ
+
+Ambiente de desenvolvimento
+
+GitHub
+
+Versionamento de código e integração de equipe
+
+SQL (conceitual)
+
+Modelagem para futura expansão com banco
+
+Mermaid.js
+
+Diagrama de classes
+
+HTML
+
+Geração automática de relatórios visuais
+
+🧠 5. Conceitos Acadêmicos Envolvidos
+
+Conversão de unidades de energia (J, Wh, kWh)
+
+Eficiência térmica e perdas por calor
+
+Massa molar, densidade, entalpia
+
+Serialização de objetos e arquivos
+
+Geração dinâmica de arquivos HTML
+
+Diagramas UML (com Mermaid.js)
+
+🖥️ 6. Execução do Projeto
+
+Compile o projeto completo em sua IDE Java (recomendado: BlueJ).
+
+Execute a classe Main no pacote app.
+
+Forneça os valores solicitados:
+
+Massa de lixo molhado (toneladas)
+
+Massa de materiais secos (kg)
+
+Eficiência da queima
+
+Área da turbina (m²)
+
+Os resultados serão exibidos no terminal e salvos automaticamente.
+
+🧾 7. Códigos-Fonte e Diagrama de Classes
+
+A seguir está o diagrama de classes do projeto, criado com Mermaid.js, representando a estrutura dos pacotes e relações entre as classes principais:
+
+classDiagram
+
+class Main {
+  +main(String[]): void
+}
+
+class LixoSeco {
+  - mMadeira: double
+  - mTecidos: double
+  - mPapeis: double
+  - eficiencia: double
+  - jAparente: double
+  - jUtil: double
+  - jPerda: double
+  + calcularEnergias(): void
+  + getJAparente(): double
+  + getJUtil(): double
+  + getJPerda(): double
+}
+
+class ConEnSec {
+  + aparenteParaWh(ls): double
+  + utilParaWh(ls): double
+  + perdaParaWh(ls): double
+}
+
+class ReEnSec {
+  - ls: LixoSeco
+  - ces: ConEnSec
+  + relatorio(): void
+}
+
+class Conversoes {
+  + energia_met(double): double
+  + massa_met(double): double
+  + mol_met(double): double
+}
+
+class Turbina {
+  - area_turbina: double
+  + set_area_turbina(double): void
+  + energia_paraVelocidade(double): void
+  + potencia_maxima(double): double
+}
+
+class EficienciaBiometano {
+  + eficiencia: double
+  + entalpia_metano: double
+}
+
+class Dados {
+  + local: String
+  + toneladas_lixo: double
+  + metano_produzido: double
+  + energia_lixo: double
+  + area_turbina: double
+  + SalvarDados(Dados): void
+}
+
+class CriadorHTML {
+  + CriarHTML(Dados): void
+}
+
+Main --> LixoSeco
+Main --> ConEnSec
+Main --> ReEnSec
+Main --> Conversoes
+Main --> Turbina
+Main --> Dados
+Main --> CriadorHTML
+
+ReEnSec --> LixoSeco
+ReEnSec --> ConEnSec
+ConEnSec --> LixoSeco
+Conversoes --> EficienciaBiometano
+Turbina --> Conversoes
+
+📌 8. Considerações Finais
+
+Este projeto buscou aliar conceitos de física, sustentabilidade e programação orientada a objetos, fornecendo uma simulação educacional do potencial de reaproveitamento de lixo para geração de energia.
+
+O uso de arquivos e interfaces simples permite que o código seja expandido futuramente para interface gráfica, banco de dados real e aplicações web.
+
+Obrigado pela atenção! 😊
+
