@@ -165,6 +165,7 @@ ReEnSec --> ConEnSec
 ConEnSec --> LixoSeco
 Conversoes --> EficienciaBiometano
 Turbina --> Conversoes
+``````
 
 ## 📌 8. Considerações Finais
 Este projeto buscou aliar conceitos de física, sustentabilidade e programação orientada a objetos, fornecendo uma simulação educacional do potencial de reaproveitamento de lixo para geração de energia.
