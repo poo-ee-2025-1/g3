@@ -42,7 +42,7 @@ O projeto foi dividido em **módulos principais**, utilizando os princípios da 
 | 👤 Participante     | 🛠️ Responsabilidades                   |
 |---------------------|----------------------------------------|
 | Pablo Henrique       | Lixo Seco; Integração de códigos        |
-| João Moiniere        | Lixo Molhado; Banco de dados            |
+| João Moynier         | Lixo Molhado; Banco de dados            |
 | Ítalo e Arthur       | Interface e apresentação visual         |
 
 ---
