@@ -44,8 +44,7 @@
 - Exportação em `.pdf` e `.html`.
 
 ### ⚠️ O que não deu para cumprir:
-- Integração com interface gráfica por falta de tempo.
-- Uso real de banco de dados (apenas simulado/conceitual).
+-Eu consegui efetivar todos meus objetivos com exito!
 
 ### ❗ Dificuldades principais:
 - Uniformização dos estilos de código entre os colegas.
@@ -92,5 +91,3 @@
 - A entrega final representa com fidelidade um projeto modular, bem documentado e pronto para evoluções futuras.
 
 ---
-
-📎 *Relatório individual gerado com apoio do ChatGPT.*
