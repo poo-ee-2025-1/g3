@@ -1,34 +1,20 @@
-﻿%% Diagrama de Casos de Uso
 
-%% Salve como .md para renderizar no GitHub
+``````mermaid
+sequenceDiagram
+    participant Usuário
+    participant LixoSeco
+    participant Turbina
+    participant Conversoes
+    participant HTML as CriadorHTML
 
-graph TD
+    Usuário->>LixoSeco: Processo(local, área, volume)
+    LixoSeco->>Turbina: vazao_massica(...)
+    LixoSeco->>Turbina: vazao_energica(...)
+    LixoSeco->>Turbina: tempo_aquecimento(...)
+    LixoSeco->>Turbina: tempo_vaporizacao(...)
+    LixoSeco->>Turbina: energia_perda(...)
+    LixoSeco->>Turbina: potencia_turbina(...)
+    LixoSeco->>Conversoes: kg_para_ton(...)
+    LixoSeco->>HTML: CriarHTML(Dados)
 
-`    `Usuario((Usuário))
-
-
-
-`    `subgraph Sistema
-
-`        `CadastrarLixo[ "Cadastrar dados do lixo" ]
-
-`        `CalcularEnergia[ "Calcular energia gerada" ]
-
-`        `GerarRelatorio[ "Gerar relatório HTML" ]
-
-`    `end
-
-`    `Usuario --> CadastrarLixo
-
-`    `Usuario --> CalcularEnergia
-
-`    `Usuario --> GerarRelatorio
-
-`    `CalcularEnergia -->|Usa| ProcessarOrganico
-
-`    `CalcularEnergia -->|Usa| ProcessarSeco
-
-`    `ProcessarOrganico[ "Processar lixo orgânico" ]
-
-`    `ProcessarSeco[ "Processar lixo seco" ]
-
+``````
