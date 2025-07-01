@@ -3,7 +3,9 @@ package application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.control.TabPane;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -21,6 +23,25 @@ public class Scene1Controller {
 	Button logoutButton;
 	@FXML
 	TabPane tabPane;
+	@FXML
+	TextField textFieldLote;
+	@FXML
+	TextField textFieldLixoGerado;
+	@FXML
+	TextField textFieldVolumeDeAgua;
+	@FXML
+	TextField textFieldAreaDeVazao;
+	@FXML
+	TableView myTableView;
+	@FXML
+	Button buttonGerar;
+	@FXML
+	Button buttonAtualizar;
+	@FXML
+	Button buttonDeletar;
+	@FXML
+	Button buttonVisualizar;
+	
 	
 	Stage stage;
 	
@@ -43,4 +64,35 @@ public class Scene1Controller {
 			stage.close();
 		}
 	}
+    
+    public void gerar() {
+    	String lote = textFieldLote.getText();
+    	double lixoGerado = Double.parseDouble(textFieldLixoGerado.getText());
+    	double areaDeVazao = Double.parseDouble(textFieldAreaDeVazao.getText());
+    	double volumeDeAgua = Double.parseDouble(textFieldVolumeDeAgua.getText());
+    	//TESTE:
+    	System.out.println(lote + lixoGerado + areaDeVazao + volumeDeAgua);
+    	
+    }
+    
+    public void atualizar() {
+    	String lote = textFieldLote.getText();
+    	double lixoGerado = Double.parseDouble(textFieldLixoGerado.getText());
+    	double areaDeVazao = Double.parseDouble(textFieldAreaDeVazao.getText());
+    	double volumeDeAgua = Double.parseDouble(textFieldVolumeDeAgua.getText());
+    	//TESTE:
+    	System.out.println(lote + lixoGerado + areaDeVazao + volumeDeAgua);
+    	
+    }
+    
+    public void deletar() {
+    	//deletar um objeto clicado
+    	//TESTE:
+    	System.out.println("DELETADO!");
+    }
+    public void visualizar() {
+    	//selecionar para aparecer HTML
+    	//TESTE:
+    	System.out.println("RELATÓRIO A MOSTRA!");
+    }
 }
