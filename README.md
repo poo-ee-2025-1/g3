@@ -88,7 +88,7 @@ O projeto foi dividido em módulos principais, utilizando os princípios da prog
 
 📟 **7. Códigos-Fonte e Diagramas UML (Mermaid.js)**
 
-* [Diagrama de Casos de Uso](USO.md)
+* [Diagrama de Casos de Uso](Diagramas/USO.md)
 * [Diagrama de Classes](diagrama_classe.md)
 * [Diagrama de Sequência](diagrama_sequencia.md)
 
