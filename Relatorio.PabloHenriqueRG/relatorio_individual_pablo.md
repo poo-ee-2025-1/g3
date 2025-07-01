@@ -34,9 +34,9 @@
 - [x] Reorganização de pacotes: `modelo`, `serviços`, `util`, `app`.
 
 ### 📌 Commits mais relevantes:
-- `fix/integrate-lixo-seco-and-molhado`: Integração dos dois módulos.
-- `feat/lixo-seco-energy-model`: Adição do modelo de cálculo de energia.
-- `docs/add-final-readme-and-diagram`: Inclusão de documentação final e diagrama UML.
+- `teste-secos/Add files via upload`: Integração dos dois módulos.
+- `teste-secos/Add files via upload`: Adição do modelo de cálculo de energia.
+- `teste-secos/Add files via upload`: Inclusão de documentação final e diagrama UML.
 
 ### 📎 Documentos relevantes:
 - `README.md` completo com diagrama e instruções de execução.
@@ -65,9 +65,9 @@
 - Ajudei colegas a entenderem conceitos de serialização e geração de HTML.
 
 ### 📌 Commits extras:
-- `chore/refactor-packages`: Organização dos pacotes do projeto.
-- `docs/relatorio-individual`: Relatório individual final e checklist.
-- `fix/mermaid-diagram-render`: Correção do diagrama para renderização no GitHub.
+- `Teste-secos/Add files via upload`: Organização dos pacotes do projeto.
+- `Testes-secos/Update README.md`: Relatório individual final e checklist.
+- `Update README.md`: Correção do diagrama para renderização no GitHub.
 
 ---
 
