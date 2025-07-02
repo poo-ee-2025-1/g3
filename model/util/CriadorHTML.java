@@ -1,12 +1,19 @@
 package model.util;
 
+import java.awt.Desktop;
 import java.io.*;
+import java.net.URL;
 import java.time.LocalDateTime;
+import java.net.*;
 
 import model.database.Dados;
 
 public class CriadorHTML
 {
+	public static File html;
+
+	//CriadorHTML.html 
+	
     public static void CriarHTML(Dados dado)
     {
     	String HTML = "";
@@ -85,15 +92,30 @@ public class CriadorHTML
         //Criaçao de arquivo
         try
         {
-            LocalDateTime data = LocalDateTime.now();
-            File arquivo = new File(data + ".html");
+            //LocalDateTime data = LocalDateTime.now();
+            File arquivo = new File("RELATORIO" + ".html");
+            
+            if (arquivo.isFile())
+            {
+            	System.out.println("RELATORIO.hmtl ENCONTRADO, SUBSTITUINDO");
+            	
+            	if(arquivo.delete())
+            	{
+            		System.out.println("deletado");
+            	}
+            }
+            
             if(arquivo.createNewFile())
             {
                 System.out.println("Arquivo Criado: " + arquivo.getName());
             }
             
             FileWriter fwriter = new FileWriter(arquivo);
+            
             fwriter.write(HTML);
+            
+            html = arquivo;
+            
             fwriter.close();
         }
         catch(Exception e)
@@ -101,4 +123,16 @@ public class CriadorHTML
         
         }
     }
+    
+    public static void AbrirHTML()
+    {
+    	try {
+    		Desktop.getDesktop().browse(html.toURI());
+    	}
+    	catch (IOException e2)
+    	{
+    		e2.printStackTrace();
+    	}
+    }
+    
 }
