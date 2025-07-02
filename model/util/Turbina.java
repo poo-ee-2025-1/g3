@@ -19,8 +19,10 @@ public class Turbina {
 	//AQUECIMENTO DA AGUA
 	static double CALOR_ESPECIFICO_AGUA = 4.184; // kJ/kg * Kelvin
 	
-	public static double volume = 1.000; //m^3
+	public static double volume = 2; //m^3
 	//0.001 m^3 seria 1 litro de água
+	
+	
 	
 	public static double DENSIDADE = 997; //kg/m^3
 	
@@ -33,6 +35,9 @@ public class Turbina {
 	
 	public static double variacao_temperatura(double vazao_energia)
 	{
+		massa_agua = DENSIDADE * volume;
+		//atualizo a massa de agua se o volume for diferente do valor inicial
+		
 		return Math.abs(vazao_energia) / (massa_agua * CALOR_ESPECIFICO_AGUA);
 	}
 	//Variacao de temperatura em Kelvin por segundo
@@ -52,6 +57,9 @@ public class Turbina {
 	
 	public static double tempo_vaporizacao(double vazao_energia)
 	{
+		massa_agua = DENSIDADE * volume;
+		//atualizo a massa de agua se o volume for diferente do valor inicial
+		
 		return (COEFICIENTE_LATENCIA_VAPOR_AGUA * massa_agua) / Math.abs(vazao_energia);
 	}
 	//O tempo que leva para a agua virar vapor
