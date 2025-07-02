@@ -4,6 +4,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -14,34 +17,54 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="386.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label fx:id="labelNomeUsuario" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="285.0" text="TEXTO">
+                  <Label fx:id="labelNomeUsuario" layoutX="14.0" layoutY="186.0" prefHeight="30.0" prefWidth="600.0" text="TEXTO">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="labelUsername" layoutX="14.0" layoutY="44.0" prefHeight="30.0" prefWidth="284.0" text="TEXTO">
+                  <Label fx:id="labelUsername" layoutX="14.0" layoutY="216.0" prefHeight="30.0" prefWidth="600.0" text="TEXTO">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="labelQualificacao" layoutX="14.0" layoutY="74.0" prefHeight="30.0" prefWidth="282.0" text="TEXTO">
+                  <Label fx:id="labelQualificacao" layoutX="14.0" layoutY="246.0" prefHeight="30.0" prefWidth="600.0" text="TEXTO">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Button fx:id="logoutButton" layoutX="534.0" layoutY="164.0" mnemonicParsing="false" onAction="#logout" text="logout" />
+                  <Button fx:id="logoutButton" layoutX="489.0" layoutY="331.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="97.0" text="logout" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
                </children></AnchorPane>
-      </content>
-    </Tab>
-    <Tab text="Acesso Relatórios">
-      <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
       </content>
     </Tab>
       <Tab text="Gerador Relatório">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="1.0" layoutY="7.0" prefHeight="17.0" prefWidth="600.0" style="-fx-font-weight: bold;" text="Relatório">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="342.0" layoutY="120.0" prefHeight="17.0" prefWidth="113.0" text="Volume de  Água" />
+                  <Label layoutX="127.0" layoutY="120.0" prefHeight="17.0" prefWidth="108.0" text="Área de Vazão" />
+                  <TableView fx:id="myTableView" layoutY="212.0" prefHeight="159.0" prefWidth="600.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="buttonGerar" layoutX="201.0" layoutY="173.0" mnemonicParsing="false" onAction="#gerar" prefHeight="25.0" prefWidth="62.0" text="Gerar" />
+                  <Button fx:id="buttonAtualizar" layoutX="269.0" layoutY="173.0" mnemonicParsing="false" onAction="#atualizar" text="Atualizar" />
+                  <Button fx:id="buttonDeletar" layoutX="336.0" layoutY="173.0" mnemonicParsing="false" onAction="#deletar" prefHeight="25.0" prefWidth="63.0" text="Deletar" />
+                  <Label layoutX="342.0" layoutY="59.0" prefHeight="17.0" prefWidth="164.0" text="Lixo Gerado" />
+                  <Label layoutX="127.0" layoutY="59.0" prefHeight="17.0" prefWidth="126.0" text="Lote" />
+                  <TextField fx:id="textFieldLote" layoutX="127.0" layoutY="81.0" />
+                  <TextField fx:id="textFieldLixoGerado" layoutX="342.0" layoutY="81.0" />
+                  <TextField fx:id="textFieldAreaDeVazao" layoutX="127.0" layoutY="141.0" />
+                  <TextField fx:id="textFieldVolumeDeAgua" layoutX="342.0" layoutY="141.0" />
+                  <Button fx:id="buttonVisualizar" layoutX="520.0" layoutY="173.0" mnemonicParsing="false" onAction="#visualizar" text="Visualizar" />
+               </children></AnchorPane>
         </content>
       </Tab>
   </tabs>
