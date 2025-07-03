@@ -24,6 +24,8 @@ import java.util.ResourceBundle;
 import java.net.URL;
 import java.sql.*;
 import model.util.CriadorHTML;
+import model.util.LixoOrganico;
+import model.database.*;
 
 
 public class Scene1Controller implements Initializable{
@@ -51,7 +53,7 @@ public class Scene1Controller implements Initializable{
 	@FXML 
 	TextField textFieldAreaDeVazao;
 	@FXML
-	TextArea textAreaComentario;
+	TextArea textFieldComentario;
 	@FXML
 	Button buttonGerar;
 	@FXML
@@ -101,9 +103,10 @@ public class Scene1Controller implements Initializable{
 	}
     
     //inicializacao da tableView
-    @Override
+    @FXML
 	public void initialize(URL url, ResourceBundle resourceBundle) {
 		idColumn.setCellValueFactory(new PropertyValueFactory<Dados, Integer>("id"));
+ //   	idColumn.setCellValueFactory(null);
 		dia_relatorioColumn.setCellValueFactory(new PropertyValueFactory<Dados, Date>("data"));
 		loteColumn.setCellValueFactory(new PropertyValueFactory<Dados, String>("lote"));
 		tipoColumn.setCellValueFactory(new PropertyValueFactory<Dados, String>("tipoLixo"));
@@ -120,7 +123,7 @@ public class Scene1Controller implements Initializable{
     	double lixoGerado = Double.parseDouble(textFieldLixoGerado.getText());
     	double areaDeVazao = Double.parseDouble(textFieldAreaDeVazao.getText());
     	double volumeDeAgua = Double.parseDouble(textFieldVolumeDeAgua.getText());
-    	String comentario = textAreaComentario.getText();
+    	String comentario = textFieldComentario.getText();
     	
     	//inicializacao de um novo dado a ser salvo
     	Dados dado = new Dados();
@@ -130,6 +133,8 @@ public class Scene1Controller implements Initializable{
     	dado.set_toneladas_organico(lixoGerado);
     	dado.set_area(areaDeVazao);
     	dado.set_volume(volumeDeAgua);
+    	
+    	dado.set_tipo(Dados.TipoLixo.SECO);
     	
     	//criacao do novo dado na tableView
     	ObservableList<Dados> list = dados.getItems();
@@ -143,7 +148,7 @@ public class Scene1Controller implements Initializable{
     	lixoOrg.Processo(lote, lixoGerado, areaDeVazao, volumeDeAgua);
     	dado.set_energia_lixo(lixoOrg.energia_lixo);
     	dado.set_energia_gerada(lixoOrg.energia_produzida_gerador);
-    	dado.set_energia_perdida(Math.abs(dado.get_energia_lixo()) - dado.get_energia_gerada);
+    	dado.set_energia_perdida(Math.abs(dado.get_energia_lixo()) - dado.get_energia_gerada());
     	
     	//sets complexos de data de geracao do novo dado
     	LocalDate ld = LocalDate.now();
@@ -174,7 +179,7 @@ public class Scene1Controller implements Initializable{
     	double lixoGerado = Double.parseDouble(textFieldLixoGerado.getText());
     	double areaDeVazao = Double.parseDouble(textFieldAreaDeVazao.getText());
     	double volumeDeAgua = Double.parseDouble(textFieldVolumeDeAgua.getText());
-    	String comentario = textAreaComentario.getText();
+    	String comentario = textFieldComentario.getText();
     	
     	// PRECISA AQUI AINDA COLOCANDO PARA FORA DO METODO?
     	Database database = new Database("db");
@@ -220,11 +225,12 @@ public class Scene1Controller implements Initializable{
     //metodo para mostrar html
     public void visualizar() {
     	//selecao do objeto na tableView
-    	int idSelecionado = dados.getSelectionModel().getSelectedIndex();
+    	//int idSelecionado = dados.getSelectionModel().getSelectedIndex();
+    	Dados dado = dados.getSelectionModel().getSelectedItem();
     	
     	// ESCREVER METODOS CORRETOS
     	CriadorHTML.CriarHTML(dado);
-    	CriadorHTML.abriHTML(dado);
+    	CriadorHTML.AbrirHTML();
     	System.out.println("Relatório HTML Gerado!!");
     }
 }
