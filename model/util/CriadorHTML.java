@@ -21,7 +21,7 @@ public class CriadorHTML
          * CRIAR DIFERENTES RELATORIOS PARA DIFERENTES TIPOS DE LIXO
          */
         
-    	switch(dado.get_tipo())
+    	switch(dado.getTipo())
     	{
     	
     	/*
@@ -52,7 +52,7 @@ public class CriadorHTML
    					    </html>
    					""";
    			
-   			HTML = String.format(HTML,dado.get_local(), dado.get_toneladas_organico(), dado.get_energia_lixo(), dado.get_volume(), dado.get_area(), dado.get_energia_gerada(), dado.get_dia(), dado.get_comentario());
+   			HTML = String.format(HTML,dado.getLote(), dado.getToneladas(), dado.get_energia_lixo(), dado.get_volume(), dado.get_area(), dado.get_energia_gerada(), dado.getData(), dado.get_comentario());
         
     		break;
         
@@ -86,7 +86,7 @@ public class CriadorHTML
 				    </html>
 				""";
 		
-		HTML = String.format(HTML,dado.get_local(), dado.get_toneladas_madeira(), dado.get_toneladas_tecido(),dado.get_toneladas_papel(), dado.get_energia_lixo(), dado.get_volume(), dado.get_area(), dado.get_energia_gerada(), dado.get_dia(), dado.get_comentario());
+		HTML = String.format(HTML,dado.getLote(), dado.get_toneladas_madeira(), dado.get_toneladas_tecido(),dado.get_toneladas_papel(), dado.get_energia_lixo(), dado.get_volume(), dado.get_area(), dado.get_energia_gerada(), dado.getData(), dado.get_comentario());
     		break;
     	}
         //Criaçao de arquivo
