@@ -92,8 +92,6 @@ O projeto foi dividido em módulos principais, utilizando os princípios da prog
 * [Diagrama de **Classes**](Diagramas/CLASSES.md)
 * [Diagrama de **Sequência**](Diagramas/SEQUENCIA.md)
 
-> O GitHub irá renderizá-los automaticamente quando abertos.
-
 ---
 📜 **7,5. Relatórios pessoais da equipe:**
 
