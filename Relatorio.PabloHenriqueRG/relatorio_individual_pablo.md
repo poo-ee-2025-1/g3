@@ -60,7 +60,7 @@
 - Criei **diagrama de classes** para ajudar todos a entenderem a estrutura geral.
 - Reestruturei os pacotes para manter separação lógica clara (MVC + serviços).
 - Formatei os relatroios dos demais, e auxiliei em sua composição.
--Axiliei da composição e reformulação da interface grafica do programa.
+- Axiliei da composição e reformulação da interface grafica do programa.
 
 ### 💬 Comunicação:
 - Sugeri padronizações e práticas de documentação para todos os membros.
