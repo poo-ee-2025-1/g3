@@ -56,13 +56,17 @@
 ## 3. 🚀 Contribuições Além do Atribuído
 
 ### 🤝 Apoio à equipe:
-- Auxiliei os colegas na **refatoração de classes do módulo molhado** para manter coerência.
+- Auxiliei os colegas na **refatoração de classes do módulo de lixo orgânico** para manter coerência.
 - Criei **diagrama de classes** para ajudar todos a entenderem a estrutura geral.
 - Reestruturei os pacotes para manter separação lógica clara (MVC + serviços).
+- Formatei os relatroios dos demais, e auxiliei em sua composição.
+-Axiliei da composição e reformulação da interface grafica do programa.
 
 ### 💬 Comunicação:
 - Sugeri padronizações e práticas de documentação para todos os membros.
 - Ajudei colegas a entenderem conceitos de serialização e geração de HTML.
+- Agreguei com ideis e 'codigo' na formatação para 'mark down'
+- Adição de opiniões e criticas ara melhora da interface.
 
 ### 📌 Commits extras:
 - `Teste-secos/Add files via upload`: Organização dos pacotes do projeto.
@@ -79,11 +83,12 @@
   - Serialização de objetos e estrutura de pacotes.
   - Conversão de energia e cálculos físicos aplicados.
   - Geração de documentação profissional com Markdown, Mermaid e LaTeX.
+  - Utilização de arquivos '.css' para edição de interfaces.
 
 ### 🧩 Pendências futuras:
 - Evoluir a aplicação para interface gráfica (ex: JavaFX ou Swing).
 - Implementar banco de dados real com persistência em SQL.
-- Expandir os tipos de resíduos e adicionar simulações visuais.
+- Expandir os tipos de resíduos e aprimorar as simulações visuais.
 
 ### ✅ Conclusões:
 - A divisão do trabalho entre lixo seco e molhado foi eficiente.
