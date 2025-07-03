@@ -1,8 +1,4 @@
 package model.util;
-import java.sql.Date;
-import java.time.LocalDate;
-
-import banco_de_dados.*;
 
 public class LixoOrganico {
 	public double toneladas_lixo;
