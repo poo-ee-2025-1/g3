@@ -55,5 +55,3 @@
   - 🔄 Integração modular de sistemas.
 
 ---
-
-📎 *Relatório formatado e complementado com apoio do ChatGPT.*
