@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -46,24 +47,29 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label layoutX="342.0" layoutY="120.0" prefHeight="17.0" prefWidth="113.0" text="Volume de  Água" />
-                  <Label layoutX="127.0" layoutY="120.0" prefHeight="17.0" prefWidth="108.0" text="Área de Vazão" />
-                  <TableView fx:id="myTableView" layoutY="212.0" prefHeight="159.0" prefWidth="600.0">
+                  <Label layoutX="312.0" layoutY="120.0" prefHeight="17.0" prefWidth="113.0" text="Volume de  Água" />
+                  <Label layoutX="128.0" layoutY="120.0" prefHeight="17.0" prefWidth="108.0" text="Área de Vazão" />
+                  <TableView fx:id="dados" layoutY="212.0" prefHeight="159.0" prefWidth="600.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
+                      <TableColumn fx:id="idColumn" prefWidth="75.0" text="id" />
+                      <TableColumn fx:id="dia_relatorioColumn" prefWidth="75.0" text="data" />
+                        <TableColumn fx:id="loteColumn" prefWidth="75.0" text="lote" />
+                        <TableColumn fx:id="tipoColumn" prefWidth="75.0" text="tipoLixo" />
+                        <TableColumn fx:id="toneladas_lixo_organicoColumn" prefWidth="75.0" text="toneladas" />
                     </columns>
                   </TableView>
                   <Button fx:id="buttonGerar" layoutX="201.0" layoutY="173.0" mnemonicParsing="false" onAction="#gerar" prefHeight="25.0" prefWidth="62.0" text="Gerar" />
                   <Button fx:id="buttonAtualizar" layoutX="269.0" layoutY="173.0" mnemonicParsing="false" onAction="#atualizar" text="Atualizar" />
                   <Button fx:id="buttonDeletar" layoutX="336.0" layoutY="173.0" mnemonicParsing="false" onAction="#deletar" prefHeight="25.0" prefWidth="63.0" text="Deletar" />
-                  <Label layoutX="342.0" layoutY="59.0" prefHeight="17.0" prefWidth="164.0" text="Lixo Gerado" />
-                  <Label layoutX="127.0" layoutY="59.0" prefHeight="17.0" prefWidth="126.0" text="Lote" />
-                  <TextField fx:id="textFieldLote" layoutX="127.0" layoutY="81.0" />
-                  <TextField fx:id="textFieldLixoGerado" layoutX="342.0" layoutY="81.0" />
-                  <TextField fx:id="textFieldAreaDeVazao" layoutX="127.0" layoutY="141.0" />
-                  <TextField fx:id="textFieldVolumeDeAgua" layoutX="342.0" layoutY="141.0" />
+                  <Label layoutX="312.0" layoutY="59.0" prefHeight="17.0" prefWidth="164.0" text="Lixo Gerado" />
+                  <Label layoutX="126.0" layoutY="59.0" prefHeight="17.0" prefWidth="126.0" text="Lote" />
+                  <TextField fx:id="textFieldLote" layoutX="128.0" layoutY="81.0" />
+                  <TextField fx:id="textFieldLixoGerado" layoutX="312.0" layoutY="81.0" />
+                  <TextField fx:id="textFieldAreaDeVazao" layoutX="128.0" layoutY="141.0" />
+                  <TextField fx:id="textFieldVolumeDeAgua" layoutX="312.0" layoutY="141.0" />
                   <Button fx:id="buttonVisualizar" layoutX="520.0" layoutY="173.0" mnemonicParsing="false" onAction="#visualizar" text="Visualizar" />
+                  <TextArea fx:id="textFieldComentario" layoutX="472.0" layoutY="81.0" prefHeight="85.0" prefWidth="96.0" />
+                  <Label layoutX="476.0" layoutY="59.0" text="Comentários" />
                </children></AnchorPane>
         </content>
       </Tab>

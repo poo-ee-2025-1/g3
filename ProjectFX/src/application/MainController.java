@@ -29,21 +29,24 @@ public class MainController {
 	private Scene scene;
 	private Parent root;
 	
-	private String usernames[]= {"i", "arthur_jardim","joao_moynier","pablo_henrique"};
-	private String passwords[]= {"i", "arthurjardim","joaomoynier","pablohenrique"};
+	//listas de dados sobre os usuarios organizados por indice i
+	private String usernames[]= {"italo_pires", "arthur_jardim","joao_moynier","pablo_henrique"};
+	private String passwords[]= {"italopires", "arthurjardim","joaomoynier","pablohenrique"};
 	private String engineers[]= {"Ítalo Pires", "Arthur Jardim", "João Moynier", "Pablo Henrique"};
 	private String qualifications[]= {"Engenheiro Eletricista","Engenheiro Eletricista","Engenheiro Eletricista","Engenheiro Eletricista"};
 	
-	@FXML
+	@FXML //tratamento de acesso ao servico
 	public void login(ActionEvent event) throws IOException{
 		
 		String username = nameTextField.getText();
 		String password = namePasswordField.getText();
 		
+		//o 'for' em conjunto com o 'if' serve para autenticar o usuario com sua senha particular
 		for (int i = 0; i<=3; i++) {
 			if (usernames[i].equals(username)) {
 				if (passwords[i].equals(password)) {
 					
+					//caso o acesso seja autorizado, a segunda cena é carregada
 					FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene1.fxml"));
 					root = loader.load();
 					Scene1Controller scene1controller = loader.getController();
@@ -54,12 +57,13 @@ public class MainController {
 					stage.setScene(scene);
 					stage.show();
 					
-					System.out.println("login successfull!");
+					System.out.println("login feito com SUCESSO!");
 					return;
 				}
 			}
+			//tratamento de falha na verificacao de login
 			if (i==3) {
-				nameLabel.setText("login failed, please try again!");
+				nameLabel.setText("login FALHOU, por favor tente novamente!");
 			}
 		}
 	}
