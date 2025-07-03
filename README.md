@@ -88,11 +88,19 @@ O projeto foi dividido em módulos principais, utilizando os princípios da prog
 
 📟 **7. Códigos-Fonte e Diagramas UML (Mermaid.js)**
 
-* [Diagrama de Casos de Uso](Diagramas/USO.md)
-* [Diagrama de Classes](Diagramas/CLASSES.md)
-* [Diagrama de Sequência](Diagramas/SEQUENCIA.md)
+* [Diagrama de **Casos de Uso**](Diagramas/USO.md)
+* [Diagrama de **Classes**](Diagramas/CLASSES.md)
+* [Diagrama de **Sequência**](Diagramas/SEQUENCIA.md)
 
 > O GitHub irá renderizá-los automaticamente quando abertos.
+
+---
+📜 **7,5. Relatórios pessoais da equipe:**
+
+* [Relatório **Pablo Henrique RG**](Relatorio.PabloHenriqueRG/relatorio_individual_pablo.md)
+* [Relatório **João Pedro Moyniere**](Relatorio.JoãoPedroMoyniere/relatorio_individual_joao_pedro_oliveira.md)
+* [Diagrama de Sequência](Diagramas/SEQUENCIA.md)
+* [Diagrama de Sequência](Diagramas/SEQUENCIA.md)
 
 ---
 
