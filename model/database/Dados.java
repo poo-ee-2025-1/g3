@@ -7,6 +7,16 @@ import com.j256.ormlite.field.DataType;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
+
+
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import model.database.Dados.TipoLixo;
+
 @DatabaseTable(tableName = "Dados")
 public class Dados {
 	
@@ -23,15 +33,15 @@ public class Dados {
 	
 	
 	@DatabaseField(generatedId = true)
-	private int id;
+	 public int id;
 	//id para identificar o objeto no banco de dados (DB)
 	
 	@DatabaseField
-	private String local;
+	 String local;
 	//Qual o estado/município em que estamos fazendo a analise
 	
 	@DatabaseField
-	private TipoLixo tipo;
+	TipoLixo tipo;
 	//O tipo de lixo que estamos fazendo a analise
 	
 	@DatabaseField
@@ -78,7 +88,7 @@ public class Dados {
 	//Comentario do engenheiro sobre o processo de geração de energia
 	
 	@DatabaseField(dataType = DataType.DATE)
-	private Date dia_relatorio;
+	Date dia_relatorio;
 	//Dia em que o relatorio foi feito
 	
 	
@@ -101,22 +111,27 @@ public class Dados {
 	}
 	
 	//METODOS GETS
-	public int get_id()
+	public int getId()
 	{
 		return this.id;
 	}
 	
-	public String get_local()
+	public String getLote()
 	{
 		return this.local;
 	}
 	
-	public TipoLixo get_tipo()
+	public TipoLixo getTipo()
 	{
 		return this.tipo;
 	}
 	
-	public double get_toneladas_organico()
+	public String getTipoLixo()
+	{
+		return this.tipo.name();
+	}
+	
+	public double getToneladas()
 	{
 		return this.toneladas_lixo_organico;
 	}
@@ -173,7 +188,7 @@ public class Dados {
 		return this.comentario;
 	}
 	
-	public Date get_dia()
+	public Date getData()
 	{
 		return this.dia_relatorio;
 	}
