@@ -97,7 +97,7 @@ O projeto foi dividido em módulos principais, utilizando os princípios da prog
 
 * [Relatório **Pablo Henrique RG**](Relatorio.PabloHenriqueRG/relatorio_individual_pablo.md)
 * [Relatório **João Pedro Moyniere**](Relatorio.JoãoPedroMoyniere/relatorio_individual_joao_pedro_oliveira.md)
-* [Relatório **Ítalo Píres**]([RelatórioIndividualItaloPires/relatorioIndividualItaloPires.md](https://github.com/poo-ee-2025-1/g3/blob/b55f18914a6cfe3600d3fce94a6c60ed8cc89bba/Relat%C3%B3rio%20Individual%20Italo%20Pires/relatorioIndividualItaloPires.md))
+* [Relatório **Ítalo Píres**](Relatorio.Individual.Italo.Pires/relatorioIndividualItaloPires.md)
 * [Diagrama de Sequência](Diagramas/SEQUENCIA.md)
 
 ---
