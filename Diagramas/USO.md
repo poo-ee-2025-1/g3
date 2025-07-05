@@ -1,19 +1,11 @@
-````mermaid
-usecaseDiagram
-    actor Usuario
+flowchart TD
+    Usuario["Usuário"]
     
-    Usuario --> (Criar/Editar Dados)
-    Usuario --> (Excluir Dados)
-    Usuario --> (Gerar Relatório HTML)
-    Usuario --> (Abrir Relatório HTML)
+    Usuario -->|Criar/Editar Dados| CriarEditarDados["Salvar no Banco de Dados"]
+    Usuario -->|Excluir Dados| ExcluirDados["Remover do Banco de Dados"]
+    Usuario -->|Gerar Relatório HTML| GerarRelatorio["Calcular Energia (Lixo Seco/Orgânico)"]
+    Usuario -->|Abrir Relatório HTML| AbrirRelatorio["Visualizar HTML"]
     
-    (Criar/Editar Dados) --> (Salvar no Banco de Dados)
-    (Excluir Dados) --> (Remover do Banco de Dados)
-    
-    (Salvar no Banco de Dados) --> (Dados Repository)
-    (Remover do Banco de Dados) --> (Dados Repository)
-    
-    (Gerar Relatório HTML) --> (Lixo Seco: Calcular Energia)
-    (Gerar Relatório HTML) --> (Lixo Orgânico: Calcular Energia)
-    (Gerar Relatório HTML) --> (Criar HTML)
-    (Abrir Relatório HTML) --> (Visualizar HTML)
+    CriarEditarDados --> DadosRepository["Dados Repository"]
+    ExcluirDados --> DadosRepository
+    GerarRelatorio --> CriarHTML["Criar HTML"]
