@@ -96,7 +96,7 @@ O projeto foi dividido em módulos principais, utilizando os princípios da prog
 📜 **7,5. Relatórios pessoais da equipe:**
 
 * [Relatório **Pablo Henrique RG**](Relatorio.PabloHenriqueRG/relatorio_individual_pablo.md)
-* [Relatório **João Pedro Moyniere**](Relatorio.JoãoPedroMoyniere/relatorio_individual_joao_pedro_oliveira.md)
+* [Relatório **João Pedro Moyniere**](Relatorio.JoãoPedroMoyniere/Relatorio.individual.joao.pedro.oliveira.md)
 * [Relatório **Ítalo Píres**](Relatorio.Individual.Italo.Pires/relatorioIndividualItaloPires.md)
 * [Relatório **Arthur Jardim**](Relatório.Individual.ArthurJardim/Relatorio.IndividualArthur.Jardim.md)
 
