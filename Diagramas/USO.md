@@ -1,19 +1,22 @@
-```mermaid
-%% Diagrama de Casos de Uso
-graph TD
-    Usuario((Usuário))
-    
-    subgraph Sistema
-        CadastrarLixo["Cadastrar dados do lixo"]
-        CalcularEnergia["Calcular energia gerada"]
-        GerarRelatorio["Gerar relatório HTML"]
-        ProcessarOrganico["Processar lixo orgânico"]
-        ProcessarSeco["Processar lixo seco"]
-    end
+``````mermaid
 
-    Usuario --> CadastrarLixo
-    Usuario --> CalcularEnergia
-    Usuario --> GerarRelatorio
-    CalcularEnergia -->|Usa| ProcessarOrganico
-    CalcularEnergia -->|Usa| ProcessarSeco
+usecaseDiagram
+    actor Usuario
+    
+    Usuario --> (Criar/Editar Dados)
+    Usuario --> (Excluir Dados)
+    Usuario --> (Gerar Relatório HTML)
+    Usuario --> (Abrir Relatório HTML)
+    
+    (Criar/Editar Dados) --> (Salvar no Banco de Dados)
+    (Excluir Dados) --> (Remover do Banco de Dados)
+    
+    (Salvar no Banco de Dados) --> (Dados Repository)
+    (Remover do Banco de Dados) --> (Dados Repository)
+    
+    (Gerar Relatório HTML) --> (Lixo Seco: Calcular Energia)
+    (Gerar Relatório HTML) --> (Lixo Orgânico: Calcular Energia)
+    (Gerar Relatório HTML) --> (Criar HTML)
+    (Abrir Relatório HTML) --> (Visualizar HTML)
+
 ``````
