@@ -1,11 +1,31 @@
+`````mermaid
+
 flowchart TD
-    Usuario["Usuário"]
-    
-    Usuario -->|Criar/Editar Dados| CriarEditarDados["Salvar no Banco de Dados"]
-    Usuario -->|Excluir Dados| ExcluirDados["Remover do Banco de Dados"]
-    Usuario -->|Gerar Relatório HTML| GerarRelatorio["Calcular Energia (Lixo Seco/Orgânico)"]
-    Usuario -->|Abrir Relatório HTML| AbrirRelatorio["Visualizar HTML"]
-    
-    CriarEditarDados --> DadosRepository["Dados Repository"]
-    ExcluirDados --> DadosRepository
-    GerarRelatorio --> CriarHTML["Criar HTML"]
+    Usuario([Usuário])
+    CriarEditar([Criar/Editar Dados])
+    Excluir([Excluir Dados])
+    GerarHTML([Gerar Relatório HTML])
+    AbrirHTML([Abrir Relatório HTML])
+    SalvarDB([Salvar no Banco de Dados])
+    RemoverDB([Remover do Banco de Dados])
+    CalculoSeco([Lixo Seco: Calcular Energia])
+    CalculoOrganico([Lixo Orgânico: Calcular Energia])
+    Criador([Criar HTML])
+    Visualizar([Visualizar HTML])
+    Repositorio([DadosRepository])
+
+    Usuario --> CriarEditar
+    Usuario --> Excluir
+    Usuario --> GerarHTML
+    Usuario --> AbrirHTML
+
+    CriarEditar --> SalvarDB
+    Excluir --> RemoverDB
+
+    SalvarDB --> Repositorio
+    RemoverDB --> Repositorio
+
+    GerarHTML --> CalculoSeco
+    GerarHTML --> CalculoOrganico
+    GerarHTML --> Criador
+    AbrirHTML --> Visualizar
