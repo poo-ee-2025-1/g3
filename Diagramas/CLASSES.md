@@ -1,66 +1,141 @@
-``````mermaid
-
+````mermaid
 classDiagram
-    class LixoOrganico {
-        +double toneladas_lixo
-        +double metano_produzido
+    class Dados {
+        +int id
+        +String lote
+        +TipoLixo tipo
+        +double toneladas_lixo_organico
+        +double toneladas_lixo_madeira
+        +double toneladas_lixo_papel
+        +double toneladas_lixo_tecido
+        +double energia_gerador
         +double energia_lixo
-        +void Processo(String local, double lixo_gerado, double area, double volume)
+        +double energia_perdida
+        +double area_vazao
+        +double volume_agua
+        +String comentario
+        +Date dia_relatorio
+        +getId()
+        +getLote()
+        +getTipo()
+        +getToneladas()
+        +getToneladasMadeira()
+        +getToneladasPapel()
+        +getToneladasTecido()
+        +getEnergiaGerada()
+        +getEnergiaLixo()
+        +getEnergiaPerdida()
+        +getArea()
+        +getVolume()
+        +getComentario()
+        +getData()
+        +setLote(String)
+        +setTipo(TipoLixo)
+        +setToneladas(double)
+        +setToneladasMadeira(double)
+        +setToneladasPapel(double)
+        +setToneladasTecido(double)
+        +setEnergiaGerada(double)
+        +setEnergiaLixo(double)
+        +setEnergiaPerdida(double)
+        +setArea(double)
+        +setVolume(double)
+        +setComentario(String)
+        +setData(Date)
     }
-
+    
+    class DadosRepository {
+        -Database database
+        -Dao dao
+        -List~Dados~ lista_dados_carregados
+        -Dados dado_carregado
+        +create(Dados) Dados
+        +update(Dados)
+        +delete(Dados)
+        +loadFromId(int) Dados
+        +loadAll() List~Dados~
+    }
+    
+    class Database {
+        -String databaseName
+        -JdbcConnectionSource connection
+        +getConnection() JdbcConnectionSource
+        +close()
+    }
+    
     class LixoSeco {
         -double mMadeira
         -double mTecidos
         -double mPapeis
-        +void Processo(String local, double area, double volume)
-        +void ProcessoMadeira(double area)
-        +void ProcessoTecidos(double area)
-        +void ProcessoPapel(double area)
+        -double jMadeira
+        -double jTecidos
+        -double jPapeis
+        +energia_total
+        +energia_produzida_gerador
+        +vazao_energica_total
+        +ProcessoMadeira(double)
+        +ProcessoPapel(double)
+        +ProcessoTecidos(double)
+        +Processo(String, double, double)
     }
-
+    
+    class LixoOrganico {
+        +double toneladas_lixo
+        +double metano_produzido
+        +double energia_lixo
+        +double vazao_metano
+        +double vazao_energica
+        +double tempo_aquecimento
+        +double tempo_vaporizacao
+        +double energia_perdida
+        +double energia_usavel
+        +double energia_produzida_gerador
+        +Processo(String, double, double, double)
+    }
+    
     class Turbina {
-        +static double vazao_massica(double, double, double)
-        +static double vazao_energica(double, double, double)
-        +static double tempo_aquecimento(double)
-        +static double tempo_vaporizacao(double)
-        +static double energia_perda(double, double)
-        +static double potencia_turbina(double)
+        +static vazao_massica(double, double, double)
+        +static vazao_energica(double, double, double)
+        +static variacao_temperatura(double)
+        +static tempo_aquecimento(double)
+        +static tempo_vaporizacao(double)
+        +static energia_perda(double, double)
+        +static velocidade_vapor()
+        +static potencia_turbina(double)
     }
-
-    class Conversoes {
-        +static double kg_para_ton(double)
-        +static double massa_met(double)
-        +static double mol_met(double)
-        +static double energia_met(double)
-    }
-
+    
     class EficienciaBiometano {
-        <<static>>
-        +double EFICIENCIA
-        +double MET_ENTALPIA
-        +double MET_DENSIDADE
+        +static EFICIENCIA
+        +static MET_ENTALPIA
+        +static MET_MASS_MOLAR
+        +static MET_DENSIDADE
+        +static VOLUME
+        +static VEL_QUEIMA
+        +static densidade_bio()
+        +static massa_met()
+        +static velocidade_queima()
     }
-
+    
+    class Conversoes {
+        +static kg_para_ton(double)
+        +static massa_met(double)
+        +static mol_met(double)
+        +static energia_met(double)
+    }
+    
     class CriadorHTML {
-        +static void CriarHTML(Dados)
+        +static CriarHTML(Dados)
+        +static AbrirHTML()
     }
-
-    class Dados {
-        +get_tipo()
-        +get_local()
-        +get_energia_lixo()
-        +get_energia_gerada()
-        +get_volume()
-        +get_area()
-        +get_comentario()
-    }
-
-    LixoOrganico --> Turbina
-    LixoOrganico --> Conversoes
-    LixoOrganico --> EficienciaBiometano
+    
+    DadosRepository --> Database
+    DadosRepository --> Dados
+    CriadorHTML --> Dados
     LixoSeco --> Turbina
+    LixoOrganico --> Conversoes
+    LixoOrganico --> Turbina
+    LixoOrganico --> EficienciaBiometano
     LixoSeco --> Conversoes
     LixoSeco --> EficienciaBiometano
-    CriadorHTML --> Dados
-
-``````
+    Turbina --> EficienciaBiometano
+}
