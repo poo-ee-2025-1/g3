@@ -97,7 +97,7 @@ O projeto foi dividido em módulos principais, utilizando os princípios da prog
 
 * [Relatório **Pablo Henrique RG**](Relatorio.PabloHenriqueRG/relatorio_individual_pablo.md)
 * [Relatório **João Pedro Moyniere**](Relatorio.JoãoPedroMoyniere/relatorio_individual_joao_pedro_oliveira.md)
-* [Diagrama de Sequência](Diagramas/SEQUENCIA.md)
+* [Diagrama de Sequência](Relatório Individual Italo Pires/relatorioIndividualItaloPires.md)
 * [Diagrama de Sequência](Diagramas/SEQUENCIA.md)
 
 ---
