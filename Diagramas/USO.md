@@ -1,5 +1,3 @@
-``````mermaid
-
 usecaseDiagram
     actor Usuario
     
@@ -18,5 +16,3 @@ usecaseDiagram
     (Gerar Relatório HTML) --> (Lixo Orgânico: Calcular Energia)
     (Gerar Relatório HTML) --> (Criar HTML)
     (Abrir Relatório HTML) --> (Visualizar HTML)
-
-``````
