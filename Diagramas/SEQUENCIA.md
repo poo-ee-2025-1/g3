@@ -1,20 +1,25 @@
+````mermaid
 
-``````mermaid
 sequenceDiagram
-    participant Usuário
+    participant Usuario
+    participant DadosRepository
+    participant Dados
     participant LixoSeco
-    participant Turbina
-    participant Conversoes
-    participant HTML as CriadorHTML
-
-    Usuário->>LixoSeco: Processo(local, área, volume)
-    LixoSeco->>Turbina: vazao_massica(...)
-    LixoSeco->>Turbina: vazao_energica(...)
-    LixoSeco->>Turbina: tempo_aquecimento(...)
-    LixoSeco->>Turbina: tempo_vaporizacao(...)
-    LixoSeco->>Turbina: energia_perda(...)
-    LixoSeco->>Turbina: potencia_turbina(...)
-    LixoSeco->>Conversoes: kg_para_ton(...)
-    LixoSeco->>HTML: CriarHTML(Dados)
-
-``````
+    participant LixoOrganico
+    participant CriadorHTML
+    
+    Usuario->>DadosRepository: create(dados)
+    DadosRepository->>Dados: save dados
+    DadosRepository-->>Usuario: dados criado
+    
+    Usuario->>LixoSeco: ProcessoMadeira/Papel/Tecidos(area)
+    LixoSeco-->>Usuario: energia calculada
+    
+    Usuario->>LixoOrganico: Processo(lixo, area, volume)
+    LixoOrganico-->>Usuario: energia calculada
+    
+    Usuario->>CriadorHTML: CriarHTML(dados)
+    CriadorHTML-->>Usuario: arquivo HTML criado
+    
+    Usuario->>CriadorHTML: AbrirHTML()
+    CriadorHTML-->>Usuario: relatório aberto no navegador
