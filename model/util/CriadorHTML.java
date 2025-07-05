@@ -52,7 +52,7 @@ public class CriadorHTML
    					    </html>
    					""";
    			
-   			HTML = String.format(HTML,dado.getLote(), dado.getToneladas(), dado.get_energia_lixo(), dado.get_volume(), dado.get_area(), dado.get_energia_gerada(), dado.getData(), dado.get_comentario());
+   			HTML = String.format(HTML,dado.getLote(), dado.getToneladas(), dado.getEnergiaLixo(), dado.getVolume(), dado.getArea(), dado.getEnergiaGerada(), dado.getData(), dado.getComentario());
         
     		break;
         
@@ -86,7 +86,7 @@ public class CriadorHTML
 				    </html>
 				""";
 		
-		HTML = String.format(HTML,dado.getLote(), dado.get_toneladas_madeira(), dado.get_toneladas_tecido(),dado.get_toneladas_papel(), dado.get_energia_lixo(), dado.get_volume(), dado.get_area(), dado.get_energia_gerada(), dado.getData(), dado.get_comentario());
+		HTML = String.format(HTML,dado.getLote(), dado.getToneladasMadeira(), dado.getToneladasTecido(),dado.getToneladasPapel(), dado.getEnergiaLixo(), dado.getVolume(), dado.getArea(), dado.getEnergiaGerada(), dado.getData(), dado.getComentario());
     		break;
     	}
         //Criaçao de arquivo
@@ -126,6 +126,7 @@ public class CriadorHTML
     
     public static void AbrirHTML()
     {
+    	new Thread(() -> {
     	try {
     		Desktop.getDesktop().browse(html.toURI());
     	}
@@ -133,6 +134,7 @@ public class CriadorHTML
     	{
     		e2.printStackTrace();
     	}
+    	}).start();
     }
     
 }

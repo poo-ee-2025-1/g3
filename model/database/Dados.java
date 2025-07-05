@@ -37,7 +37,7 @@ public class Dados {
 	//id para identificar o objeto no banco de dados (DB)
 	
 	@DatabaseField
-	 String local;
+	 String lote;
 	//Qual o estado/município em que estamos fazendo a analise
 	
 	@DatabaseField
@@ -93,22 +93,7 @@ public class Dados {
 	
 	
 	//METODO CONSTRUTOR
-	public Dados(String local, TipoLixo tipo_lixo, double toneladas_organico, double toneladas_madeira, double toneladas_tecido, double toneladas_papel, double energia_gerador, double energia_lixo, double energia_perdida, double area_vazao, double volume_agua, String comentario, Date dia)
-	{
-		this.local = local;
-		this.tipo = tipo_lixo;
-		this.toneladas_lixo_organico = toneladas_organico;
-		this.toneladas_lixo_madeira = toneladas_madeira;
-		this.toneladas_lixo_tecido = toneladas_tecido;
-		this.toneladas_lixo_papel = toneladas_papel;
-		this.energia_gerador = energia_gerador;
-		this.energia_lixo = energia_lixo;
-		this.energia_perdida = energia_perdida;
-		this.area_vazao = area_vazao;
-		this.volume_agua = volume_agua;
-		this.comentario = comentario;
-		this.dia_relatorio = dia;
-	}
+	
 	
 	//METODOS GETS
 	public int getId()
@@ -118,7 +103,7 @@ public class Dados {
 	
 	public String getLote()
 	{
-		return this.local;
+		return this.lote;
 	}
 	
 	public TipoLixo getTipo()
@@ -136,17 +121,17 @@ public class Dados {
 		return this.toneladas_lixo_organico;
 	}
 	
-	public double get_toneladas_tecido()
+	public double getToneladasTecido()
 	{
 		return this.toneladas_lixo_tecido;
 	}
 	
-	public double get_toneladas_madeira()
+	public double getToneladasMadeira()
 	{
 		return this.toneladas_lixo_madeira;
 	}
 	
-	public double get_toneladas_papel()
+	public double getToneladasPapel()
 	{
 		return this.toneladas_lixo_papel;
 	}
@@ -158,32 +143,32 @@ public class Dados {
 	}
 	*/
 	
-	public double get_energia_gerada()
+	public double getEnergiaGerada()
 	{
 		return this.energia_gerador;
 	}
 	
-	public double get_energia_lixo()
+	public double getEnergiaLixo()
 	{
 		return this.energia_lixo;
 	}
 	
-	public double get_energia_perdida()
+	public double getEnergiaPerdida()
 	{
 		return this.energia_perdida;
 	}
 	
-	public double get_area()
+	public double getArea()
 	{
 		return this.area_vazao;
 	}
 	
-	public double get_volume()
+	public double getVolume()
 	{
 		return this.volume_agua;
 	}
 	
-	public String get_comentario()
+	public String getComentario()
 	{
 		return this.comentario;
 	}
@@ -193,40 +178,50 @@ public class Dados {
 		return this.dia_relatorio;
 	}
 	
-	
+	public String getDataFormatted()
+	{
+		return new SimpleDateFormat("yyyy-MM-dd").format(this.dia_relatorio).toString();
+	}
 	
 	//METODOS SET
-	public void set_id(int id)
+	public void setId(int id)
 	{
 		this.id = id;
 	}
 	
-	public void set_local(String local)
+	public void setLote(String local)
 	{
-		this.local = local;
+		if(local instanceof String)
+		{
+		this.lote = local.toString();
+		}
+		else
+		{
+			
+		}
 	}
 	
-	public void set_tipo(TipoLixo tipo)
+	public void setTipo(TipoLixo tipo)
 	{
 		this.tipo = tipo;
 	}
 	
-	public void set_toneladas_organico(double lixo)
+	public void setToneladas(double lixo)
 	{
 		this.toneladas_lixo_organico = lixo;
 	}
 	
-	public void set_toneladas_madeira(double lixo)
+	public void setToneladasMadeira(double lixo)
 	{
 		this.toneladas_lixo_madeira = lixo;
 	}
 	
-	public void set_toneladas_tecido(double lixo)
+	public void setToneladasTecido(double lixo)
 	{
 		this.toneladas_lixo_tecido = lixo;
 	}
 	
-	public void set_toneladas_papel(double lixo)
+	public void setToneladasPapel(double lixo)
 	{
 		this.toneladas_lixo_papel = lixo;
 	}
@@ -238,38 +233,51 @@ public class Dados {
 	}
 	*/
 	
-	public void set_energia_gerada(double energia)
+	public void setEnergiaGerada(double energia)
 	{
 		this.energia_gerador = energia;
 	}
 	
-	public void set_energia_lixo(double energia)
+	public void setEnergiaLixo(double energia)
 	{
 		this.energia_lixo = energia;
 	}
 	
-	public void set_energia_perdida(double energia)
+	public void setEnergiaPerdida(double energia)
 	{
 		this.energia_perdida = energia;
 	}
 	
-	public void set_area(double area)
+	public void setArea(double area)
 	{
-		this.area_vazao = area;
+		if(area != 0d)
+		{
+			this.area_vazao = area;
+		}
 	}
 	
-	public void set_volume(double volume)
+	public void setVolume(double volume)
 	{
-		this.volume_agua = volume;
+		if(volume != 0d)
+		{
+			this.volume_agua = volume;
+		}
 	}
 	
-	public void set_comentario(String comentario)
+	public void setComentario(String comentario)
 	{
 		this.comentario = comentario;
 	}
 	
-	public void set_dia(Date dia)
+	public void setData(Date dia)
 	{
+		if(dia instanceof Date)
+		{
 		this.dia_relatorio = dia;
+		}
+		else
+		{
+			
+		}
 	}
 }

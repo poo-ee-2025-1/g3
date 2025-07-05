@@ -57,7 +57,7 @@ public class DadosRepository {
 		}
 	}
 
-	    public void delete(int id) {
+	    public void delete(Dados dado) {
 	    	try {
 	    		//this.lista_dados_carregados = dao.queryForAll();
 	    		////Atualizo a lista dos dados carregados para mostrar antes dela ser deletada
@@ -66,9 +66,10 @@ public class DadosRepository {
 	    		
 	    		//Nao precisa carregar a lista. Deixa isso pro metodo "loadAll"
 	    		
-	    		System.out.println("DELETANDO O ELEMENTO: " + dao.queryForId(id));
+	    		//System.out.println("DELETANDO O ELEMENTO: " + dao.queryForId(id));
 	    		//Printo o objeto que vais ser deletado
-	    		dao.deleteById(id);
+	    		//dao.deleteById(id);
+	    		dao.delete(dado);
 	    		//Deleto o objeto
 	    		
 	    		//this.lista_dados_carregados = dao.queryForAll();
@@ -79,9 +80,9 @@ public class DadosRepository {
 	    		//Nao precisa carregar a lista. Deixa isso pro metodo "loadAll"
 	    		
 	    		
-	    	} catch(SQLException e) 
+	    	} catch(Exception E) 
 	    	{
-	    		System.out.println(e);
+	    		System.out.println("Erro ao deletar o elemento. ");
 	    	}
 	    }
 	    
